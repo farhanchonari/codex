@@ -3,9 +3,10 @@ import * as dotenv from 'dotenv';
 import cors from 'cors';
 import { Configuration,OpenAIApi } from 'openai';
 
-dotenv.config();
+dotenv.config({path:'/etc/secrets/.env'});
 
 const configuration =new Configuration({
+    organization:"org-GPvCgW6Bf8rqstUAkXvx1nTi",
     apiKey: process.env.OPENAI_API_KEY,
 });
 
